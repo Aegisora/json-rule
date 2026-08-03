@@ -16,11 +16,7 @@ class JsonRule extends Rule
 
     protected function executeValidate(Context $context): Result
     {
-        $value = $context->getValue();
-
-        $this->validateValue($value);
-
-        json_decode($value);
+        json_decode($this->getContextValue($context));
 
         return (json_last_error() === JSON_ERROR_NONE) ?
             $this->getDefaultValidResult() :
@@ -28,13 +24,16 @@ class JsonRule extends Rule
     }
 
     /**
-     * @param mixed $value
      * @throws InvalidRuleContextException
      */
-    private function validateValue($value): void
+    private function getContextValue(Context $context): string
     {
+        $value = $context->getValue();
+
         if (!is_string($value)) {
             throw new InvalidRuleContextException();
         }
+
+        return $value;
     }
 }
