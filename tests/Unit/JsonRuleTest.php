@@ -192,6 +192,13 @@ class JsonRuleTest extends TestCase
                     'failedRuleCode' => 'json_rule',
                 ],
             ],
+            'context value - invalid object with trailing comma' => [
+                'context' => Context::create("{\"a\": 1, \"b\": 2,}"),
+                'expectedResult' => [
+                    'isValid' => false,
+                    'failedRuleCode' => 'json_rule',
+                ],
+            ],
         ];
     }
 
