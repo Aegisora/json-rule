@@ -89,6 +89,13 @@ class JsonRuleTest extends TestCase
                     'failedRuleCode' => null,
                 ],
             ],
+            'context value - not object string wrapped with double quotes' => [
+                'context' => Context::create("\"Hello\""),
+                'expectedResult' => [
+                    'isValid' => true,
+                    'failedRuleCode' => null,
+                ],
+            ],
         ];
     }
 
