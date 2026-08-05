@@ -2,6 +2,7 @@
 
 namespace Aegisora\Rules\Tests\Unit;
 
+use Aegisora\RuleContract\Exceptions\InvalidRuleContextException;
 use Aegisora\RuleContract\Models\Context;
 use Aegisora\RuleContract\Models\Result;
 use Aegisora\RuleContract\RuleInterface;
@@ -256,6 +257,21 @@ class JsonRuleTest extends TestCase
                 ],
             ],
         ];
+    }
+
+    /**
+     * @dataProvider getInvalidContextProvidedData
+     */
+    public function testValidateThrowsInvalidRuleContextException(Context $context): void
+    {
+        $this->expectException(InvalidRuleContextException::class);
+
+        $this->jsonRule->validate($context);
+    }
+
+    public static function getInvalidContextProvidedData(): array
+    {
+        return [];
     }
 
     private static function assertActualResultEqualsExpected(
