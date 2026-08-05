@@ -54,6 +54,13 @@ class JsonRuleTest extends TestCase
                     'failedRuleCode' => null,
                 ],
             ],
+            'context value - not empty array' => [
+                'context' => Context::create('[1, 2, 3, "foo", true, false, 0, -1, 0.1, -0.1, null, ""]'),
+                'expectedResult' => [
+                    'isValid' => true,
+                    'failedRuleCode' => null,
+                ],
+            ],
             'context value - null string' => [
                 'context' => Context::create('null'),
                 'expectedResult' => [
