@@ -290,6 +290,9 @@ class JsonRuleTest extends TestCase
             'context value - negative float' => [
                 'context' => Context::create(-0.01),
             ],
+            'context value - empty array' => [
+                'context' => Context::create([]),
+            ],
         ];
     }
 
