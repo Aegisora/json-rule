@@ -296,6 +296,9 @@ class JsonRuleTest extends TestCase
             'context value - not empty array' => [
                 'context' => Context::create([1, 2, 3,]),
             ],
+            'context value - null' => [
+                'context' => Context::create(null),
+            ],
         ];
     }
 
