@@ -241,6 +241,13 @@ class JsonRuleTest extends TestCase
                     'failedRuleCode' => 'json_rule',
                 ],
             ],
+            'context value - invalid object with special character without shielding' => [
+                'context' => Context::create('{\"a\": 1, \"b\": "\"Текст с \n переносом\""}'),
+                'expectedResult' => [
+                    'isValid' => false,
+                    'failedRuleCode' => 'json_rule',
+                ],
+            ],
         ];
     }
 
