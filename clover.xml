@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1785763533">
-  <project timestamp="1785763533">
+<coverage generated="1785763784">
+  <project timestamp="1785763784">
     <file name="/home/runner/work/json-rule/json-rule/src/JsonRule.php">
       <class name="Aegisora\Rules\JsonRule" namespace="global">
         <metrics complexity="5" methods="3" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="9" coveredstatements="0" elements="12" coveredelements="0"/>
@@ -10,15 +10,15 @@
       <line num="17" type="method" name="executeValidate" visibility="protected" complexity="2" crap="6" count="0"/>
       <line num="19" type="stmt" count="0"/>
       <line num="21" type="stmt" count="0"/>
+      <line num="22" type="stmt" count="0"/>
       <line num="23" type="stmt" count="0"/>
-      <line num="25" type="stmt" count="0"/>
-      <line num="26" type="stmt" count="0"/>
-      <line num="27" type="stmt" count="0"/>
-      <line num="34" type="method" name="validateValue" visibility="private" complexity="2" crap="6" count="0"/>
-      <line num="36" type="stmt" count="0"/>
+      <line num="29" type="method" name="getContextValue" visibility="private" complexity="2" crap="6" count="0"/>
+      <line num="31" type="stmt" count="0"/>
+      <line num="33" type="stmt" count="0"/>
+      <line num="34" type="stmt" count="0"/>
       <line num="37" type="stmt" count="0"/>
-      <metrics loc="41" ncloc="37" classes="1" methods="3" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="9" coveredstatements="0" elements="12" coveredelements="0"/>
+      <metrics loc="40" ncloc="37" classes="1" methods="3" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="9" coveredstatements="0" elements="12" coveredelements="0"/>
     </file>
-    <metrics files="1" loc="41" ncloc="37" classes="1" methods="3" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="9" coveredstatements="0" elements="12" coveredelements="0"/>
+    <metrics files="1" loc="40" ncloc="37" classes="1" methods="3" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="9" coveredstatements="0" elements="12" coveredelements="0"/>
   </project>
 </coverage>
