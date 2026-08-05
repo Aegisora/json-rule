@@ -271,7 +271,11 @@ class JsonRuleTest extends TestCase
 
     public static function getInvalidContextProvidedData(): array
     {
-        return [];
+        return [
+            'context value - zero integer' => [
+                'context' => Context::create(0),
+            ],
+        ];
     }
 
     private static function assertActualResultEqualsExpected(
