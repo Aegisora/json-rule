@@ -8,6 +8,7 @@ use Aegisora\RuleContract\Models\Result;
 use Aegisora\RuleContract\RuleInterface;
 use Aegisora\Rules\JsonRule;
 use PHPUnit\Framework\TestCase;
+use stdClass;
 
 class JsonRuleTest extends TestCase
 {
@@ -298,6 +299,9 @@ class JsonRuleTest extends TestCase
             ],
             'context value - null' => [
                 'context' => Context::create(null),
+            ],
+            'context value - object' => [
+                'context' => Context::create(new stdClass()),
             ],
         ];
     }
