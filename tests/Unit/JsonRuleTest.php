@@ -118,7 +118,7 @@ class JsonRuleTest extends TestCase
                         }
                       },
                       "company_data": {
-                        "company_name": "TechCorp Solutions",
+                        "company_name": "TechCorp \\n Solutions",
                         "headquarters": {
                           "city": "Барселона",
                           "country": "Испания",
