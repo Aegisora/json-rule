@@ -96,6 +96,88 @@ class JsonRuleTest extends TestCase
                     'failedRuleCode' => null,
                 ],
             ],
+            'context value - not empty object' => [
+                'context' => Context::create(
+                    '
+                    {
+                      "system_config": {
+                        "version": "4.2.0",
+                        "environment": "production",
+                        "maintenance_mode": false,
+                        "cluster_settings": {
+                          "nodes_active": 4,
+                          "nodes_max": 10,
+                          "timeout_ms": 5000
+                        }
+                      },
+                      "company_data": {
+                        "company_name": "TechCorp Solutions",
+                        "headquarters": {
+                          "city": "Барселона",
+                          "country": "Испания",
+                          "coordinates": {
+                            "latitude": 41.3851,
+                            "longitude": 2.1734
+                          }
+                        },
+                        "departments": [
+                          {
+                            "id": "dep_eng",
+                            "name": "Engineering",
+                            "manager_id": 1024,
+                            "budget": 1250000.50,
+                            "active_projects": ["Project_Alpha", "Project_Beta"]
+                          },
+                          {
+                            "id": "dep_mkt",
+                            "name": "Marketing",
+                            "manager_id": 2048,
+                            "budget": 850000.00,
+                            "active_projects": ["Campaign_Summer"]
+                          }
+                        ]
+                      },
+                      "employee_directory": [
+                        {
+                          "employee_id": 1024,
+                          "first_name": "Алексей",
+                          "last_name": "Смирнов",
+                          "role": "Lead Architect",
+                          "contact": {
+                            "email": "a.smirnov@techcorp.com",
+                            "phone": "+34 600 000 000"
+                          },
+                          "skills": ["Java", "Kubernetes", "System Design"],
+                          "is_remote": true,
+                          "termination_date": null
+                        },
+                        {
+                          "employee_id": 1025,
+                          "first_name": "Мария",
+                          "last_name": "Гонсалес",
+                          "role": "DevOps Engineer",
+                          "contact": {
+                            "email": "m.gonzalez@techcorp.com",
+                            "phone": "+34 600 111 111"
+                          },
+                          "skills": ["AWS", "Docker", "Python"],
+                          "is_remote": false,
+                          "termination_date": null
+                        }
+                      ],
+                      "permissions_matrix": {
+                        "admin": ["read", "write", "execute", "delete"],
+                        "editor": ["read", "write"],
+                        "viewer": ["read"]
+                      }
+                    }
+                    '
+                ),
+                'expectedResult' => [
+                    'isValid' => true,
+                    'failedRuleCode' => null,
+                ],
+            ],
         ];
     }
 
