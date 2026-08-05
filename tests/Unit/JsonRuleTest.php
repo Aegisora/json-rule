@@ -213,6 +213,13 @@ class JsonRuleTest extends TestCase
                     'failedRuleCode' => 'json_rule',
                 ],
             ],
+            'context value - invalid true string register' => [
+                'context' => Context::create("TRUE"),
+                'expectedResult' => [
+                    'isValid' => false,
+                    'failedRuleCode' => 'json_rule',
+                ],
+            ],
         ];
     }
 
