@@ -178,6 +178,13 @@ class JsonRuleTest extends TestCase
                     'failedRuleCode' => null,
                 ],
             ],
+            'context value - invalid object with single quotes' => [
+                'context' => Context::create("{'key': 'value'}"),
+                'expectedResult' => [
+                    'isValid' => false,
+                    'failedRuleCode' => 'json_rule',
+                ],
+            ],
         ];
     }
 
