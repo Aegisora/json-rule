@@ -32,7 +32,7 @@ class JsonRuleTest extends TestCase
         array $expectedResult
     ): void {
         self::assertActualResultEqualsExpected(
-            JsonRule::create()->validate($context),
+            $this->jsonRule->validate($context),
             $expectedResult
         );
     }
