@@ -304,7 +304,10 @@ class JsonRuleTest extends TestCase
                 'context' => Context::create(new stdClass()),
             ],
             'context value - callable' => [
-                'context' => Context::create(static function () {}),
+                'context' => Context::create(
+                    static function () {
+                    }
+                ),
             ],
             'context value - resource' => [
                 'context' => Context::create(tmpfile()),
