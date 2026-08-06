@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1785951032">
-  <project timestamp="1785951032">
+<coverage generated="1786037080">
+  <project timestamp="1786037080">
     <file name="/home/runner/work/json-rule/json-rule/src/JsonRule.php">
       <class name="Aegisora\Rules\JsonRule" namespace="global">
         <metrics complexity="5" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="9" coveredstatements="9" elements="12" coveredelements="12"/>
