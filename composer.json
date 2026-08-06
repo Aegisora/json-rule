@@ -1,8 +1,17 @@
 {
     "name": "aegisora/json-rule",
-    "description": "<REPOSITORY_DESCRIPTION>",
+    "description": "JSON Rule provides a simple, rule-based JSON validation implementation for the Aegisora ecosystem.",
     "type": "library",
-    "keywords": ["php", "aegisora", "aegisora-ecosystem"],
+    "keywords": [
+        "php",
+        "aegisora",
+        "aegisora-ecosystem",
+        "validation",
+        "validator",
+        "rule",
+        "json",
+        "json-validation"
+    ],
     "homepage": "https://github.com/Aegisora/json-rule",
     "support": {
         "issues": "https://github.com/Aegisora/json-rule/issues",
